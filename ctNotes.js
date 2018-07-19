@@ -1,3 +1,14 @@
+function CheckAnswer(myList,answers) {
+	if (myList.length=== answers ) {
+      greeting = "Good day";
+      myList.sort();
+      answers.sort();
+      _.isEqual([myList], [answers]) ;
+      
+	}
+  return <h1>Hello, {props.name}</h1>;
+}
+
 class Question extends React.Component {
               state = { quest: "what is life?"};
 
