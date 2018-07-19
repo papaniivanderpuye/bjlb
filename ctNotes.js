@@ -5,17 +5,20 @@ class Button extends React.Component {
   handleClick = () => {
     this.setState((prevState) => ({
       counter: prevState.counter + 1,
-      backgroundColor: 'blue'
+      bgColor: 'blue'
       
     }));
   };
   
   render() {
     return (
-      <button onClick={this.handleClick}>
-        {this.state.counter}
-        {this.state.backgroundColor}
-      </button>
+      
+      <div>
+        <button 
+          onClick={this.handleClick} 
+          style={{backgroundColor:this.state.bgColor}}>Button
+          </button>
+      </div>
     );
   }
 }
@@ -25,7 +28,9 @@ class Grid extends React.Component {
   render() {
     return (
     	<div>
-        <Button onClick={this.handleClick}>
+        <Button 
+        onClick={this.handleClick}
+        >
           {this.state.counter}
         </Button>
         <Button onClick={this.handleClick}>
